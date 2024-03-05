@@ -1,0 +1,359 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-has-toc data-has-sidebar class="astro-wjosak52"> <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>ble链接错误码说明 | My Docs</title><link rel="canonical"/><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v4.2.8"/><meta name="generator" content="Starlight v0.17.2"/><meta property="og:title" content="ble链接错误码说明"/><meta property="og:type" content="article"/><meta property="og:url"/><meta property="og:locale" content="en"/><meta property="og:description" content="ble链接中断后会出现"/><meta property="og:site_name" content="My Docs"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="ble链接错误码说明"/><meta name="twitter:description" content="ble链接中断后会出现"/><meta name="description" content="ble链接中断后会出现"/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg> <svg aria-hidden="true" class="dark astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg> <svg aria-hidden="true" class="auto astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> </template><link rel="stylesheet" href="/_astro/index.BUo8hUJ1.css" />
+<style>svg:where(.astro-h7wd53pq){color:var(--sl-icon-color);font-size:var(--sl-icon-size, 1em);width:1em;height:1em}
+</style><script type="module" src="/_astro/hoisted.pyJuioRm.js"></script>
+<script type="module" src="/_astro/page.X_0NJa-z.js"></script></head> <body class="astro-wjosak52"> <a href="#_top" class="astro-xbxfoocz">Skip to content</a>  <div class="page sl-flex astro-ep2dnkod"> <header class="header astro-ep2dnkod"><div class="header sl-flex astro-tocfibfv"> <div class="sl-flex astro-tocfibfv"> <a href="/" class="site-title sl-flex astro-63z2fi2z">  <span class="astro-63z2fi2z"> My Docs </span> </a>  </div> <div class="sl-flex astro-tocfibfv"> <site-search data-translations="{&#34;placeholder&#34;:&#34;Search&#34;}" class="astro-bngtxmtb"> <button data-open-modal disabled class="astro-bngtxmtb">  <svg aria-label="Search" class="astro-bngtxmtb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg>  <span class="sl-hidden md:sl-block astro-bngtxmtb" aria-hidden="true">Search</span> <svg aria-label="(Press / to Search)" class="sl-hidden md:sl-block astro-bngtxmtb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5Zm3 15a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10Z"/><path d="M15.293 6.707a1 1 0 1 1 1.414 1.414l-8.485 8.486a1 1 0 0 1-1.414-1.415l8.485-8.485Z"/></svg>  </button> <dialog style="padding:0" aria-label="Search" class="astro-bngtxmtb"> <div class="dialog-frame sl-flex astro-bngtxmtb">  <button data-close-modal class="sl-flex md:sl-hidden astro-bngtxmtb"> Cancel </button> <div class="search-container astro-bngtxmtb"> <div id="starlight__search" class="astro-bngtxmtb"></div> </div> </div> </dialog> </site-search>    </div> <div class="sl-hidden md:sl-flex right-group astro-tocfibfv"> <div class="sl-flex social-icons astro-tocfibfv"> <a href="https://github.com/withastro/starlight" rel="me" class="sl-flex astro-pp6oabs5"><span class="sr-only astro-pp6oabs5">GitHub</span><svg aria-hidden="true" class="astro-pp6oabs5 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-xvzi7a34"> <span class="sr-only astro-xvzi7a34">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-xvzi7a34 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" class="astro-xvzi7a34"> <option value="dark" class="astro-xvzi7a34">Dark</option><option value="light" class="astro-xvzi7a34">Light</option><option value="auto" selected="true" class="astro-xvzi7a34">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-xvzi7a34 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div> </div> </header> <nav class="sidebar astro-ep2dnkod" aria-label="Main"> <starlight-menu-button class="astro-ymuu4fm5"> <button aria-expanded="false" aria-label="Menu" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-ymuu4fm5"> <svg aria-hidden="true" class="astro-ymuu4fm5 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg>  </button> </starlight-menu-button>    <div id="starlight__sidebar" class="sidebar-pane astro-ep2dnkod"> <div class="sidebar-content sl-flex astro-ep2dnkod"> <ul class="top-level astro-ysxskfxb"> <li class="astro-ysxskfxb"> <details open class="astro-ysxskfxb"> <summary class="astro-ysxskfxb"> <div class="group-label astro-ysxskfxb"> <span class="large astro-ysxskfxb">mdstudy</span>  </div> <svg aria-hidden="true" class="caret astro-ysxskfxb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-ysxskfxb"> <li class="astro-ysxskfxb"> <a href="/mdstudy/mdstudy/" class="astro-ysxskfxb"> <span class="astro-ysxskfxb">markdown10分钟快速入门</span>  </a> </li> </ul>  </details> </li><li class="astro-ysxskfxb"> <details open class="astro-ysxskfxb"> <summary class="astro-ysxskfxb"> <div class="group-label astro-ysxskfxb"> <span class="large astro-ysxskfxb">gitstudy</span>  </div> <svg aria-hidden="true" class="caret astro-ysxskfxb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-ysxskfxb"> <li class="astro-ysxskfxb"> <a href="/gitstudy/gitstudy/" class="astro-ysxskfxb"> <span class="astro-ysxskfxb">git 常用指令学习</span>  </a> </li> </ul>  </details> </li><li class="astro-ysxskfxb"> <details open class="astro-ysxskfxb"> <summary class="astro-ysxskfxb"> <div class="group-label astro-ysxskfxb"> <span class="large astro-ysxskfxb">blestudy</span>  </div> <svg aria-hidden="true" class="caret astro-ysxskfxb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-ysxskfxb"> <li class="astro-ysxskfxb"> <a href="/blestudy/ble链接错误码说明/" aria-current="page" class="astro-ysxskfxb"> <span class="astro-ysxskfxb">ble链接错误码说明</span>  </a> </li> </ul>  </details> </li><li class="astro-ysxskfxb"> <details open class="astro-ysxskfxb"> <summary class="astro-ysxskfxb"> <div class="group-label astro-ysxskfxb"> <span class="large astro-ysxskfxb">at</span>  </div> <svg aria-hidden="true" class="caret astro-ysxskfxb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-ysxskfxb"> <li class="astro-ysxskfxb"> <a href="/at/手把at指令/" class="astro-ysxskfxb"> <span class="astro-ysxskfxb">手把AT指令</span>  </a> </li> </ul>  </details> </li> </ul>  <div class="md:sl-hidden"> <div class="mobile-preferences sl-flex astro-if5zqfcx"> <div class="sl-flex social-icons astro-if5zqfcx"> <a href="https://github.com/withastro/starlight" rel="me" class="sl-flex astro-pp6oabs5"><span class="sr-only astro-pp6oabs5">GitHub</span><svg aria-hidden="true" class="astro-pp6oabs5 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-xvzi7a34"> <span class="sr-only astro-xvzi7a34">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-xvzi7a34 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" class="astro-xvzi7a34"> <option value="dark" class="astro-xvzi7a34">Dark</option><option value="light" class="astro-xvzi7a34">Light</option><option value="auto" selected="true" class="astro-xvzi7a34">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-xvzi7a34 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div>  </div> </div> </div> </nav> <div class="main-frame astro-ep2dnkod">  <div class="lg:sl-flex astro-cm6st3au"> <aside class="right-sidebar-container astro-cm6st3au"> <div class="right-sidebar astro-cm6st3au"> <div class="lg:sl-hidden astro-yntmylxo"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-lk3jli2b"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-lk3jli2b"><details id="starlight__mobile-toc" class="astro-lk3jli2b"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-lk3jli2b"><div class="toggle sl-flex astro-lk3jli2b">On this page<svg aria-hidden="true" class="caret astro-lk3jli2b astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </div><span class="display-current astro-lk3jli2b"></span></summary><div class="dropdown astro-lk3jli2b"><ul class="isMobile astro-fv3zmvt3" style="--depth: 0;"> <li class="astro-fv3zmvt3" style="--depth: 0;"> <a href="#_top" class="astro-fv3zmvt3" style="--depth: 0;"> <span class="astro-fv3zmvt3" style="--depth: 0;">Overview</span> </a>  </li> </ul> </div></details></nav></mobile-starlight-toc></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-yntmylxo"><div class="sl-container astro-yntmylxo"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-fv3zmvt3" style="--depth: 0;"> <li class="astro-fv3zmvt3" style="--depth: 0;"> <a href="#_top" class="astro-fv3zmvt3" style="--depth: 0;"> <span class="astro-fv3zmvt3" style="--depth: 0;">Overview</span> </a>  </li> </ul> </nav></starlight-toc></div></div> </div> </aside> <div class="main-pane astro-cm6st3au">  <main data-pagefind-body lang="en" dir="ltr" class="astro-wjosak52">    <div class="content-panel astro-pyq2d343"> <div class="sl-container astro-pyq2d343"> <h1 id="_top" class="astro-mivphdoq">ble链接错误码说明</h1>  </div> </div>  <div class="content-panel astro-pyq2d343"> <div class="sl-container astro-pyq2d343"> <div class="sl-markdown-content"> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>错误码</th><th>错误原因</th><th>详细描述</th></tr></thead><tbody><tr><td>0x01</td><td>未知HCI命令</td><td>控制器不理解主机发送的HCI命令数据包操作码。所给出的操作码可能不对应于本文档中指定的任何操作码，也不对应于任何特定于供应商的操作码，或者该命令可能尚未实现</td></tr><tr><td>0x02</td><td>未知连接标识符</td><td>从主机发送了一个命令，该命令应该识别一个连接，但该连接不存在或没有识别正确的连接类型</td></tr><tr><td>0x03</td><td>硬件故障</td><td>控制器中的某些故障的方式无法用任何其他错误代码来描述。此错误代码所隐含的含义依赖于实现</td></tr><tr><td>0x04</td><td>PAGE超时</td><td>由于页面超时配置参数而导致页面超时。此错误代码可能只出现在HCI_Remote_Name_Request和HCI_Create_Connection命令中</td></tr><tr><td>0x05</td><td>身份验证失败</td><td>由于配对或身份验证过程中的结果不正确，导致配对或身份验证失败。这可能是由于一个错误的密码或链接键</td></tr><tr><td>0x06</td><td>PIN或密钥丢失</td><td>当配对因PIN丢失而失败，或认证因密钥丢失而失败时，将使用PIN或密钥丢失的错误代码</td></tr><tr><td>0x07</td><td>内存容量超出</td><td>控制器内存不足，无法存储新参数</td></tr><tr><td>0x08</td><td>连接超时</td><td>给定连接的链路监视超时已超时，或者给定广播的同步超时已过期</td></tr><tr><td>0x09</td><td>超过连接限制</td><td>尝试创建另一个连接失败，因为控制器已经达到其可以支持的连接数量的限制。</td></tr><tr><td>0x0A</td><td>对设备的同步连接限制超过</td><td>控制器已达到可以达到对设备的同步连接数量的限制。设备可以支持的同步连接数取决于实现</td></tr><tr><td>0x0B</td><td>连接已存在</td><td>当已经连接到该设备，且不允许对同一设备进行多个连接时，已尝试创建到该设备的新连接</td></tr><tr><td>0x0C</td><td>非法命令</td><td>无法执行所请求的命令，因为控制器目前处于此时无法处理此命令的状态。错误代码未知HCI命令有效的命令操作码</td></tr><tr><td>0x0D</td><td>因安全因素被拒接连接</td><td>本次连接由于未满足安全要求而被拒绝，如身份验证或配对</td></tr><tr><td>0x0F</td><td>连接被拒绝是由不可接受的BD_ADDR</td><td>本次连接被拒绝，因为该设备不接受BD_ADDR。这可能是因为该设备将只接受来自特定BD_ADDRs的连接</td></tr><tr><td>0x10</td><td>连接接受超时超过</td><td>此连接尝试已超过连接接受超时</td></tr><tr><td>0x11</td><td>不支持的特性或参数值</td><td>不支持HCI命令中的特性或参数值。此错误代码不得在LMP中用于PDU</td></tr><tr><td>0x12</td><td>无效的HCI命令参数</td><td>至少有一个HCI命令参数无效</td></tr><tr><td>0x13</td><td>远程用户终止连接</td><td>远程设备上的用户要么终止了连接，要么停止了广播数据包</td></tr><tr><td>0x14</td><td>由于低资源而导致的远程设备终止连接</td><td>远程设备由于资源不足而终止了连接</td></tr><tr><td>0x15</td><td>远程设备终止连接</td><td>远程设备由于设备即将关机而终止连接</td></tr><tr><td>0x16</td><td>由本地主机终止连接</td><td>本地设备终止连接、终止与广播器的同步，或终止广播数据包</td></tr><tr><td>0x17</td><td>重复尝试</td><td>控制器不允许身份验证或配对过程，因为自上次身份验证或配对尝试失败后经过的时间太少</td></tr><tr><td>0x18</td><td>不允许配对</td><td>设备不允许配对。例如，当一个设备只允许在某些用户输入允许配对后的某个时间窗口内允许配对时</td></tr><tr><td>0x19</td><td>位置LMP PDU</td><td>控制器接收到未知的LMP操作码</td></tr><tr><td>0x1A</td><td>不支持的远程功能</td><td>远程设备不支持与发出的命令、LMP PDU或链接层控制PDU关联的功能</td></tr><tr><td>0x1B</td><td>SCO偏移被拒绝</td><td>在LMP_SCO_LINK_REQ PDU中请求的偏移已被拒绝</td></tr><tr><td>0x1C</td><td>SCO时间间隔被拒绝</td><td>在LMP_SCO_LINK_REQ PDU中请求的时间间隔已被拒绝</td></tr><tr><td>0x1D</td><td>SCO空气模式被拒绝</td><td>在LMP_SCO_LINK_REQ PDU中请求的空气模式已被拒绝</td></tr><tr><td>0x1E</td><td>无效的LMP参数/无效的LL参数</td><td>某些LMP PDU/LL控制PDU参数无效</td></tr><tr><td>0x1F</td><td>未指定的错误</td><td>没有指定的其他错误代码适合使用</td></tr><tr><td>0x20</td><td>不受支持的LMP参数值/不受支持的LL参数值</td><td>LMP PDU或LL控制PDU包含至少一个此时控制器不支持的参数值。这通常是在长时间的协商过程之后使用的，例如在LMP_HOLD_REQ、LMP_SNIFF_REQ和LMP_ENCRYPTION_KEY_SIZE_-REQPDU交换期间。这可以被链路层使用，例如在连接参数请求链路层控制过程中</td></tr><tr><td>0x21</td><td>不允许角色更改</td><td>控制器此时不允许角色更改</td></tr><tr><td>0x22</td><td>LMP响应超时/LL响应超时</td><td>LMP事务在LMP响应超时内未响应，或LL事务在LL响应超时内未响应</td></tr><tr><td>0x24</td><td>LMP PDU不允许</td><td>控制器发送了一个具有不允许的操作码的LMP PDU</td></tr><tr><td>0x25</td><td>加密模式不可接受</td><td>此时所请求的加密模式不可接受</td></tr><tr><td>0x26</td><td>无法更改连接键</td><td>由于使用了固定的单位密钥，无法更改链接键</td></tr><tr><td>0x27</td><td>请求的QoS不支持</td><td>不支持请求的服务质量</td></tr><tr><td>0x28</td><td>即时传递</td><td>无法执行包含瞬间的LMP PDU或LL PDU，因为这将发生的瞬间已经传递</td></tr><tr><td>0x29</td><td>不支持单元密钥配对</td><td>无法请求单元密钥配对</td></tr><tr><td>0x2A</td><td>不同的事务冲突</td><td>已启动了与正在进行的事务发生冲突的LMP事务或LL的过程</td></tr><tr><td>0x2C</td><td>QoS不可接受参数</td><td>此时不能接受指定的服务质量参数，但其他参数也可以接受</td></tr><tr><td>0x2D</td><td>QoS拒绝</td><td>不能接受指定的服务质量参数，应终止QoS协商</td></tr><tr><td>0x2E</td><td>不支持通道评估</td><td>控制器无法执行通道评估，因为不支持它</td></tr><tr><td>0x2F</td><td>安全度不足</td><td>所发送的HCI命令或LMP PDU仅可在加密的链路上执行</td></tr><tr><td>0x30</td><td>参数超出强制范围</td><td>请求的参数值超出了给定HCI命令或LMP PDU的强制参数范围，并且收件人不接受该值</td></tr><tr><td>0x32</td><td>设备切换挂起</td><td>设备切换正在挂起，当HCI命令或LMP PDU因设备切换而不能被接受时，可以使用此命令。这也可用于通知对等设备关于挂起的角色切换</td></tr><tr><td>0x34</td><td>保留SLOT冲突</td><td>当前同步协商已终止，协商状态设置为保留冲突</td></tr><tr><td>0x35</td><td>ROLE开关失败</td><td>已经尝试了一个角色开关，但它失败了，并恢复了原始的图片网结构。开关可能已经故障，因为TDD开关或图片开关故障</td></tr><tr><td>0x36</td><td>扩展查询相应太大</td><td>扩展查询响应的要求太大，无法适应控制器支持的任何数据包类型</td></tr><tr><td>0x37</td><td>主机不支持的安全简单配对</td><td>IO功能请求或响应被拒绝，因为发送主机不支持安全简单配对，即使接收链接管理器不支持</td></tr><tr><td>0x38</td><td>主机Busy—配对</td><td>主机忙于另一个配对操作，无法支持所请求的配对，接收设备稍后应再次重试配对</td></tr><tr><td>0x39</td><td>连接拒绝到未找到合适的通道</td><td>控制器无法计算通道选择操作的适当值</td></tr><tr><td>0x3A</td><td>控制器繁忙</td><td>操作被拒绝，因为控制器繁忙，无法处理请求</td></tr><tr><td>0x3B</td><td>不可接受的连接参数</td><td>远程设备由于一个或多个不可接受的连接参数而终止了连接或拒绝了一个请求</td></tr><tr><td>0x3C</td><td>广播超时</td><td>固定时间的广播完成，或者对于定向广播，广播在没有创建连接的情况下完成</td></tr><tr><td>0x3D</td><td>由于MIC故障而终止的连接终止</td><td>由于接收到的数据包上的消息完整性检查(MIC)失败，连接或同步已终止</td></tr><tr><td>0x3E</td><td>连接未能被建立/同步超时</td><td>连接未能建立/同步超时错误代码表明，LL启动了连接或启动了对定期广播的同步，但连接未能建立，或链接层未能与第一次尝试的6个周期广播事件内的定期广播同步</td></tr><tr><td>0x40</td><td>时钟调整被拒绝</td><td>时钟调整被拒绝，但将尝试使用时钟拖动错误代码表明，此时无法使用提供的参数对微型时钟进行粗调整。相反，中心系统将尝试使用时钟拖动来移动时钟</td></tr><tr><td>0x41</td><td>未定义类型</td><td>表示LMP PDU被拒绝，因为类型0子映射当前未定义</td></tr><tr><td>0x42</td><td>未知广播标识符</td><td>从主机发送了一个应该标识广播或同步句柄的命令，但广播或同步句柄不存在</td></tr><tr><td>0x43</td><td>达到限制</td><td>已达到请求的操作数量，并表示活动已完成（例如，广播或扫描）</td></tr><tr><td>0x44</td><td>被主机取消的操作</td><td>主机向控制器发出的且仍未完成的请求已成功取消</td></tr><tr><td>0x45</td><td>包太长</td><td>试图发送或接收超过允许的最大包长度的包</td></tr></tbody></table> </div> <footer class="astro-qxum7g3x"> <div class="meta sl-flex astro-qxum7g3x">   </div> <div class="pagination-links astro-up2deu7k" dir="ltr"> <a href="/gitstudy/gitstudy/" rel="prev" class="astro-up2deu7k"> <svg aria-hidden="true" class="astro-up2deu7k astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg>  <span class="astro-up2deu7k"> Previous <br class="astro-up2deu7k"> <span class="link-title astro-up2deu7k">git 常用指令学习</span> </span> </a> <a href="/at/手把at指令/" rel="next" class="astro-up2deu7k"> <svg aria-hidden="true" class="astro-up2deu7k astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg>  <span class="astro-up2deu7k"> Next <br class="astro-up2deu7k"> <span class="link-title astro-up2deu7k">手把AT指令</span> </span> </a> </div>  </footer>  </div> </div>   </main> </div> </div>  </div> </div>  </body></html>

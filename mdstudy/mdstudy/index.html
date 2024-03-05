@@ -1,0 +1,276 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-has-toc data-has-sidebar class="astro-wjosak52"> <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>markdown10分钟快速入门 | My Docs</title><link rel="canonical"/><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v4.2.8"/><meta name="generator" content="Starlight v0.17.2"/><meta property="og:title" content="markdown10分钟快速入门"/><meta property="og:type" content="article"/><meta property="og:url"/><meta property="og:locale" content="en"/><meta property="og:description" content="md10分钟入门"/><meta property="og:site_name" content="My Docs"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="markdown10分钟快速入门"/><meta name="twitter:description" content="md10分钟入门"/><meta name="description" content="md10分钟入门"/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg> <svg aria-hidden="true" class="dark astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg> <svg aria-hidden="true" class="auto astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> </template><link rel="stylesheet" href="/_astro/index.BUo8hUJ1.css" />
+<style>svg:where(.astro-h7wd53pq){color:var(--sl-icon-color);font-size:var(--sl-icon-size, 1em);width:1em;height:1em}
+</style><script type="module" src="/_astro/hoisted.pyJuioRm.js"></script>
+<script type="module" src="/_astro/page.X_0NJa-z.js"></script></head> <body class="astro-wjosak52"> <a href="#_top" class="astro-xbxfoocz">Skip to content</a>  <div class="page sl-flex astro-ep2dnkod"> <header class="header astro-ep2dnkod"><div class="header sl-flex astro-tocfibfv"> <div class="sl-flex astro-tocfibfv"> <a href="/" class="site-title sl-flex astro-63z2fi2z">  <span class="astro-63z2fi2z"> My Docs </span> </a>  </div> <div class="sl-flex astro-tocfibfv"> <site-search data-translations="{&#34;placeholder&#34;:&#34;Search&#34;}" class="astro-bngtxmtb"> <button data-open-modal disabled class="astro-bngtxmtb">  <svg aria-label="Search" class="astro-bngtxmtb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg>  <span class="sl-hidden md:sl-block astro-bngtxmtb" aria-hidden="true">Search</span> <svg aria-label="(Press / to Search)" class="sl-hidden md:sl-block astro-bngtxmtb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5Zm3 15a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10Z"/><path d="M15.293 6.707a1 1 0 1 1 1.414 1.414l-8.485 8.486a1 1 0 0 1-1.414-1.415l8.485-8.485Z"/></svg>  </button> <dialog style="padding:0" aria-label="Search" class="astro-bngtxmtb"> <div class="dialog-frame sl-flex astro-bngtxmtb">  <button data-close-modal class="sl-flex md:sl-hidden astro-bngtxmtb"> Cancel </button> <div class="search-container astro-bngtxmtb"> <div id="starlight__search" class="astro-bngtxmtb"></div> </div> </div> </dialog> </site-search>    </div> <div class="sl-hidden md:sl-flex right-group astro-tocfibfv"> <div class="sl-flex social-icons astro-tocfibfv"> <a href="https://github.com/withastro/starlight" rel="me" class="sl-flex astro-pp6oabs5"><span class="sr-only astro-pp6oabs5">GitHub</span><svg aria-hidden="true" class="astro-pp6oabs5 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-xvzi7a34"> <span class="sr-only astro-xvzi7a34">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-xvzi7a34 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" class="astro-xvzi7a34"> <option value="dark" class="astro-xvzi7a34">Dark</option><option value="light" class="astro-xvzi7a34">Light</option><option value="auto" selected="true" class="astro-xvzi7a34">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-xvzi7a34 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div> </div> </header> <nav class="sidebar astro-ep2dnkod" aria-label="Main"> <starlight-menu-button class="astro-ymuu4fm5"> <button aria-expanded="false" aria-label="Menu" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-ymuu4fm5"> <svg aria-hidden="true" class="astro-ymuu4fm5 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg>  </button> </starlight-menu-button>    <div id="starlight__sidebar" class="sidebar-pane astro-ep2dnkod"> <div class="sidebar-content sl-flex astro-ep2dnkod"> <ul class="top-level astro-ysxskfxb"> <li class="astro-ysxskfxb"> <details open class="astro-ysxskfxb"> <summary class="astro-ysxskfxb"> <div class="group-label astro-ysxskfxb"> <span class="large astro-ysxskfxb">mdstudy</span>  </div> <svg aria-hidden="true" class="caret astro-ysxskfxb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-ysxskfxb"> <li class="astro-ysxskfxb"> <a href="/mdstudy/mdstudy/" aria-current="page" class="astro-ysxskfxb"> <span class="astro-ysxskfxb">markdown10分钟快速入门</span>  </a> </li> </ul>  </details> </li><li class="astro-ysxskfxb"> <details open class="astro-ysxskfxb"> <summary class="astro-ysxskfxb"> <div class="group-label astro-ysxskfxb"> <span class="large astro-ysxskfxb">gitstudy</span>  </div> <svg aria-hidden="true" class="caret astro-ysxskfxb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-ysxskfxb"> <li class="astro-ysxskfxb"> <a href="/gitstudy/gitstudy/" class="astro-ysxskfxb"> <span class="astro-ysxskfxb">git 常用指令学习</span>  </a> </li> </ul>  </details> </li><li class="astro-ysxskfxb"> <details open class="astro-ysxskfxb"> <summary class="astro-ysxskfxb"> <div class="group-label astro-ysxskfxb"> <span class="large astro-ysxskfxb">blestudy</span>  </div> <svg aria-hidden="true" class="caret astro-ysxskfxb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-ysxskfxb"> <li class="astro-ysxskfxb"> <a href="/blestudy/ble链接错误码说明/" class="astro-ysxskfxb"> <span class="astro-ysxskfxb">ble链接错误码说明</span>  </a> </li> </ul>  </details> </li><li class="astro-ysxskfxb"> <details open class="astro-ysxskfxb"> <summary class="astro-ysxskfxb"> <div class="group-label astro-ysxskfxb"> <span class="large astro-ysxskfxb">at</span>  </div> <svg aria-hidden="true" class="caret astro-ysxskfxb astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-ysxskfxb"> <li class="astro-ysxskfxb"> <a href="/at/手把at指令/" class="astro-ysxskfxb"> <span class="astro-ysxskfxb">手把AT指令</span>  </a> </li> </ul>  </details> </li> </ul>  <div class="md:sl-hidden"> <div class="mobile-preferences sl-flex astro-if5zqfcx"> <div class="sl-flex social-icons astro-if5zqfcx"> <a href="https://github.com/withastro/starlight" rel="me" class="sl-flex astro-pp6oabs5"><span class="sr-only astro-pp6oabs5">GitHub</span><svg aria-hidden="true" class="astro-pp6oabs5 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-xvzi7a34"> <span class="sr-only astro-xvzi7a34">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-xvzi7a34 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" class="astro-xvzi7a34"> <option value="dark" class="astro-xvzi7a34">Dark</option><option value="light" class="astro-xvzi7a34">Light</option><option value="auto" selected="true" class="astro-xvzi7a34">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-xvzi7a34 astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div>  </div> </div> </div> </nav> <div class="main-frame astro-ep2dnkod">  <div class="lg:sl-flex astro-cm6st3au"> <aside class="right-sidebar-container astro-cm6st3au"> <div class="right-sidebar astro-cm6st3au"> <div class="lg:sl-hidden astro-yntmylxo"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-lk3jli2b"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-lk3jli2b"><details id="starlight__mobile-toc" class="astro-lk3jli2b"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-lk3jli2b"><div class="toggle sl-flex astro-lk3jli2b">On this page<svg aria-hidden="true" class="caret astro-lk3jli2b astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </div><span class="display-current astro-lk3jli2b"></span></summary><div class="dropdown astro-lk3jli2b"><ul class="isMobile astro-fv3zmvt3" style="--depth: 0;"> <li class="astro-fv3zmvt3" style="--depth: 0;"> <a href="#_top" class="astro-fv3zmvt3" style="--depth: 0;"> <span class="astro-fv3zmvt3" style="--depth: 0;">Overview</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 0;"> <a href="#基础语法" class="astro-fv3zmvt3" style="--depth: 0;"> <span class="astro-fv3zmvt3" style="--depth: 0;">基础语法</span> </a> <ul class="isMobile astro-fv3zmvt3" style="--depth: 1;"> <li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#标题语法" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">标题语法</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#段落及换行" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">段落及换行</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#强调语法粗体和斜体" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">强调语法(粗体和斜体)</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#列表语法" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">列表语法</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#引用语法" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">引用语法</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#代码语法" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">代码语法</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#分割线" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">分割线</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#链接" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">链接</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#图片语法" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">图片语法</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#完结" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">完结</span> </a>  </li> </ul>  </li> </ul> </div></details></nav></mobile-starlight-toc></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-yntmylxo"><div class="sl-container astro-yntmylxo"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-fv3zmvt3" style="--depth: 0;"> <li class="astro-fv3zmvt3" style="--depth: 0;"> <a href="#_top" class="astro-fv3zmvt3" style="--depth: 0;"> <span class="astro-fv3zmvt3" style="--depth: 0;">Overview</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 0;"> <a href="#基础语法" class="astro-fv3zmvt3" style="--depth: 0;"> <span class="astro-fv3zmvt3" style="--depth: 0;">基础语法</span> </a> <ul class="astro-fv3zmvt3" style="--depth: 1;"> <li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#标题语法" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">标题语法</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#段落及换行" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">段落及换行</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#强调语法粗体和斜体" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">强调语法(粗体和斜体)</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#列表语法" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">列表语法</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#引用语法" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">引用语法</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#代码语法" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">代码语法</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#分割线" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">分割线</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#链接" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">链接</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#图片语法" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">图片语法</span> </a>  </li><li class="astro-fv3zmvt3" style="--depth: 1;"> <a href="#完结" class="astro-fv3zmvt3" style="--depth: 1;"> <span class="astro-fv3zmvt3" style="--depth: 1;">完结</span> </a>  </li> </ul>  </li> </ul> </nav></starlight-toc></div></div> </div> </aside> <div class="main-pane astro-cm6st3au">  <main data-pagefind-body lang="en" dir="ltr" class="astro-wjosak52">    <div class="content-panel astro-pyq2d343"> <div class="sl-container astro-pyq2d343"> <h1 id="_top" class="astro-mivphdoq">markdown10分钟快速入门</h1>  </div> </div>  <div class="content-panel astro-pyq2d343"> <div class="sl-container astro-pyq2d343"> <div class="sl-markdown-content"> <p><strong>简介</strong>
+Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。</p>
+<blockquote>
+<p>语法学习非常简单,只需要10分钟不到,即可直接上手!!!</p>
+</blockquote>
+<h2 id="基础语法">基础语法</h2>
+<h3 id="标题语法">标题语法</h3>
+<p>总结就是几级标题,就用几个#</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>md</th><th>HTML</th><th>预览效果</th></tr></thead><tbody><tr><td># 一级标题</td><td>&#x3C;h1>一级标题&#x3C;/h1></td><td><h1>一级标题</h1></td></tr><tr><td>## 二级标题</td><td>&#x3C;h2>二级标题&#x3C;/h2></td><td><h2>二级标题</h2></td></tr><tr><td>### 三级标题</td><td>&#x3C;h3>三级标题&#x3C;/h3></td><td><h3>三级标题</h3></td></tr><tr><td>#### 四级标题</td><td>&#x3C;h4>四级标题&#x3C;/h4></td><td><h4>四级标题</h4></td></tr><tr><td>##### 五级标题</td><td>&#x3C;h5>五级标题&#x3C;/h5></td><td><h5>五级标题</h5></td></tr><tr><td>###### 六级标题</td><td>&#x3C;h6>六级标题&#x3C;/h6></td><td><h6>六级标题</h6></td></tr></tbody></table>
+<hr>
+<h3 id="段落及换行">段落及换行</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>md</th><th>HTML</th><th>预览效果</th></tr></thead><tbody><tr><td>I really like using Markdown.<br><br>I think I’ll use it to format all of my documents from now on.</td><td>&#x3C;p>I really like using Markdown.&#x3C;/p> <br><br> &#x3C;p>I think I’ll use it to format all of my documents from now on.&#x3C;/p></td><td><p>I really like using Markdown.</p><p>I think I’ll use it to format all of my documents from now on.</p></td></tr></tbody></table>
+<blockquote>
+<p>如语法显示一般,段落推荐直接书写,也可以使用p标签,不推荐在每一段之前进行首行缩进.一段的结束换行可以添加两个空格再回车或者使用&#x3C;br>进行换行</p>
+</blockquote>
+<hr>
+<h3 id="强调语法粗体和斜体">强调语法(粗体和斜体)</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>md</th><th>HTML</th><th>预览效果</th></tr></thead><tbody><tr><td>粗体</td><td>我是**粗体**</td><td>我是&#x3C;strong>粗体&#x3C;/strong></td><td>我是<strong>粗体</strong></td></tr><tr><td>斜体</td><td>我是*斜体*</td><td>我是&#x3C;em>斜体&#x3C;em></td><td>我是<em>斜体<em></em></em></td></tr><tr><td>加粗斜体</td><td>我是***加粗斜体***</td><td>我是&#x3C;strong>&#x3C;em>斜体&#x3C;em>&#x3C;/strong></td><td>我是<strong><em>加粗斜体<strong><em></em></strong></em></strong></td></tr></tbody></table>
+<blockquote>
+<p>如上所示,斜体两边各用一个<em>括起来,粗体两边用**括起来,加粗斜体则用***
+其中的</em>可以用下划线代替,如__加粗__ : <strong>加粗</strong></p>
+</blockquote>
+<hr>
+<h3 id="列表语法">列表语法</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>md</th><th>HTML</th><th>预览效果</th></tr></thead><tbody><tr><td>有序列表</td><td>1. First item<br>2. Second item<br>3.Third item <br> 4. Fourth item</td><td>&#x3C;ol><br>&#x3C;li>First item&#x3C;/li> <br> &#x3C;li>Second item&#x3C;/li> <br> &#x3C;li>Third item&#x3C;/li> <br> &#x3C;li>Fourth item&#x3C;/li> <br> &#x3C;/ol></td><td><ol><li>First item</li><li>Second item</li><li>Third item</li><li>Fourth item</li></ol></td></tr><tr><td>无序列表</td><td>* First item <br> * Second item <br> * Third item <br> * Fourth item</td><td>&#x3C;ul><br>&#x3C;li>First item&#x3C;/li> <br> &#x3C;li>Second item&#x3C;/li> <br> &#x3C;li>Third item&#x3C;/li> <br> &#x3C;li>Fourth item&#x3C;/li> <br> &#x3C;/ul></td><td><ul><li>First item</li><li>Second item</li><li>Third item</li><li>Fourth item</li></ul></td></tr></tbody></table>
+<blockquote>
+<p>有序:要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。</p>
+</blockquote>
+<blockquote>
+<p>无序:要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。</p>
+</blockquote>
+<hr>
+<h3 id="引用语法">引用语法</h3>
+<p>eg:
+> 这是一段引用文本。
+>> 这是一段嵌套引用文本。</p>
+<p>效果如下:</p>
+<blockquote>
+<p>这是markdown的引用语法</p>
+<blockquote>
+<p>这是一段嵌套引用文本。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>如上所示,使用一个>来代表这是引用的文本,也可以使用>>来嵌套引用,用来表示引用或者强调</p>
+</blockquote>
+<hr>
+<h3 id="代码语法">代码语法</h3>
+<p>语句中含有代码</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>md</th><th>HTML</th><th>预览效果</th></tr></thead><tbody><tr><td>我是`code`</td><td>我是&#x3C;code>code&#x3C;/code></td><td>我是<code dir="auto">code</code></td></tr></tbody></table>
+<p>代码块</p>
+<p>```
+printf(“hello world”);
+```</p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.usa2f.css"><script type="module" src="/_astro/ec.sgewm.js"></script><figure class="frame not-content"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#d6deeb;--1:#403f53">printf("hello world");</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="printf(&#x22;hello world&#x22;);"><div></div></button></div></figure></div>
+<blockquote>
+<ul>
+<li>使用三个反引号创建代码块,要想代码语法有高亮,可以在代码块反引号后添加C,python等指定代码类型,想代码显示函数,可以加如下语句
+{.line-numbers}<br></li>
+<li>要将单词或短语表示为代码，请将其包裹在反引号 (`) 中。</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="分割线">分割线</h3>
+<p>***
+---
+___</p>
+<hr>
+<hr>
+<hr>
+<blockquote>
+<p>要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (---) 或下划线 (___) ，并且不能包含其他内容。</p>
+</blockquote>
+<hr>
+<h3 id="链接">链接</h3>
+<p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。</p>
+<p>超链接Markdown语法代码：[超链接显示名](超链接地址 “超链接title”)</p>
+<p>对应的HTML代码：&#x3C;a href=“超链接地址” title=“超链接title”>超链接显示名</p>
+<p>这是一个链接 [我是百度链接](https://baidu.com)。</p>
+渲染效果如下：
+<p>这是一个链接 <a href="https://baidu.com">我是百度链接</a>。</p>
+<hr>
+<h4 id="给链接增加-title">给链接增加 Title</h4>
+<p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#D6DEEB;--1:#403F53">这是一个链接 [</span><span style="--0:#D6DEEB;--0td:underline;--1:#403F53;--1td:underline">我是百度链接</span><span style="--0:#D6DEEB;--1:#403F53">]</span><span style="--0:#7FDBCA;--1:#096E72">(</span><span style="--0:#FF869A;--0td:underline;--1:#954F5A;--1td:underline">https://baidu.com</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--1:#3B61B0"><span style="--0:#82B1FF">"</span><span style="--0:#ECC48D">个性广告推荐器</span><span style="--0:#82B1FF">"</span></span><span style="--0:#7FDBCA;--1:#096E72">)</span><span style="--0:#D6DEEB;--1:#403F53">。</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="这是一个链接 [我是百度链接](https://baidu.com &#x22;个性广告推荐器&#x22;)。"><div></div></button></div></figure></div>
+<p>渲染效果如下：</p>
+<p>这是一个链接,添加了title <a href="https://baidu.com" title="个性广告推荐器">我是百度链接</a>。</p>
+<hr>
+<h4 id="网址和email地址">网址和Email地址</h4>
+<p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接。</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#D6DEEB;--1:#403F53">&#x3C;</span><span style="--0:#FF869A;--0td:underline;--1:#954F5A;--1td:underline">https://baidu.com</span><span style="--0:#D6DEEB;--1:#403F53">></span></div><div class="ec-line"><span style="--0:#D6DEEB;--1:#403F53">&#x3C;</span><span style="--0:#FF869A;--0td:underline;--1:#954F5A;--1td:underline">gmail@example.com</span><span style="--0:#D6DEEB;--1:#403F53">></span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="<https://baidu.com><gmail@example.com>"><div></div></button></div></figure></div>
+<p>渲染效果如下：</p>
+<p><a href="https://baidu.com">https://baidu.com</a>
+<a href="mailto:gmail@example.com">gmail@example.com</a></p>
+<hr>
+<h4 id="带格式化的链接">带格式化的链接</h4>
+<p>强调 链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#D6DEEB;--1:#403F53">I love supporting the </span><span style="--0:#C5E478;--1:#3B61B0">**[</span><span style="--0:#D6DEEB;--0td:underline;--1:#403F53;--1td:underline">EFF</span><span style="--0:#C5E478;--1:#3B61B0">]</span><span style="--0:#7FDBCA;--1:#096E72">(</span><span style="--0:#FF869A;--0td:underline;--1:#954F5A;--1td:underline">https://eff.org</span><span style="--0:#7FDBCA;--1:#096E72">)</span><span style="--0:#C5E478;--1:#3B61B0">**</span><span style="--0:#D6DEEB;--1:#403F53">.</span></div><div class="ec-line"><span style="--0:#D6DEEB;--1:#403F53">This is the </span><span style="--0:#C792EA;--1:#8844AE">*[</span><span style="--0:#D6DEEB;--0td:underline;--1:#403F53;--1td:underline">Markdown Guide</span><span style="--0:#C792EA;--1:#8844AE">]</span><span style="--0:#7FDBCA;--1:#096E72">(</span><span style="--0:#FF869A;--0td:underline;--1:#954F5A;--1td:underline">https://www.markdownguide.org</span><span style="--0:#7FDBCA;--1:#096E72">)</span><span style="--0:#C792EA;--1:#8844AE">*</span><span style="--0:#D6DEEB;--1:#403F53">.</span></div><div class="ec-line"><span style="--0:#D6DEEB;--1:#403F53">See the section on [</span><span style="--0:#C5E478;--1:#3B61B0">`</span><span style="--0:#C5E478;--0td:underline;--1:#3B61B0;--1td:underline">code</span><span style="--0:#C5E478;--1:#3B61B0">`</span><span style="--0:#D6DEEB;--1:#403F53">]</span><span style="--0:#7FDBCA;--1:#096E72">(</span><span style="--0:#FF869A;--0td:underline;--1:#954F5A;--1td:underline">#code</span><span style="--0:#7FDBCA;--1:#096E72">)</span><span style="--0:#D6DEEB;--1:#403F53">.</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="I love supporting the **[EFF](https://eff.org)**.This is the *[Markdown Guide](https://www.markdownguide.org)*.See the section on [&#x60;code&#x60;](#code)."><div></div></button></div></figure></div>
+<p>渲染效果如下：</p>
+<p>I love supporting the <strong><a href="https://eff.org">EFF</a></strong>.
+This is the <em><a href="https://www.markdownguide.org">Markdown Guide</a></em>.
+See the section on <a href="#code"><code dir="auto">code</code></a>.</p>
+<h4 id="引用类型链接">引用类型链接</h4>
+<p>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。
+引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。</p>
+<p>链接的第一部分
+尽管不是必需的，可以在第一组和第二组括号之间包含一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</p>
+<p>链接的第二部分
+引用第一部分的名字,冒号,然后使用&#x3C;>包括网址,()包括title,小括号可以省略,一般放在文件末尾,是不会在md渲染中显示的,可以在有长链接时保持文档整洁</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#D6DEEB;--1:#403F53">[</span><span style="--0:#D6DEEB;--0td:underline;--1:#403F53;--1td:underline">hobbit-hole</span><span style="--0:#D6DEEB;--1:#403F53">] [</span><span style="--0:#D6DEEB;--0td:underline;--1:#403F53;--1td:underline">Hobbit</span><span style="--0:#D6DEEB;--1:#403F53">]</span></div><div class="ec-line"><span style="--0:#82AAFF;--1:#3B61B0">[1]</span><span style="--0:#D6DEEB;--1:#403F53">: &#x3C;</span><span style="--0:#FF869A;--0td:underline;--1:#954F5A;--1td:underline">https://en.wikipedia.org/wiki/Hobbit#Lifestyle</span><span style="--0:#D6DEEB;--1:#403F53">> </span><span style="--1:#3B61B0"><span style="--0:#82B1FF">(</span><span style="--0:#ECC48D">Hobbit lifestyles</span><span style="--0:#82B1FF">)</span></span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="[hobbit-hole] [Hobbit][1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> (Hobbit lifestyles)"><div></div></button></div></figure></div>
+<p>[hobbit-hole] <a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="Hobbit lifestyles">Hobbit</a></p>
+<hr>
+<h3 id="图片语法">图片语法</h3>
+<p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#d6deeb;--1:#403f53">插入图片Markdown语法代码：![图片alt](图片链接 "图片title")。</span></div><div class="ec-line"><span style="--0:#d6deeb;--1:#403f53">对应的HTML代码：&#x3C;img src="图片链接" alt="图片alt" title="图片title"></span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="插入图片Markdown语法代码：![图片alt](图片链接 &#x22;图片title&#x22;)。对应的HTML代码：<img src=&#x22;图片链接&#x22; alt=&#x22;图片alt&#x22; title=&#x22;图片title&#x22;>"><div></div></button></div></figure></div>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#d6deeb;--1:#403f53">![wlop-1se.jpg](https://ntd-1304354671.cos.ap-chengdu.myqcloud.com/mdPicture/wlop-1se.jpg)</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="![wlop-1se.jpg](https://ntd-1304354671.cos.ap-chengdu.myqcloud.com/mdPicture/wlop-1se.jpg)"><div></div></button></div></figure></div>
+<p>实际效果
+<img src="https://ntd-1304354671.cos.ap-chengdu.myqcloud.com/mdPicture/wlop-1se.jpg" alt="wlop-1se.jpg"></p>
+<hr>
+<h3 id="完结">完结</h3>
+<p>到这里你已经入门了,可以开始使用md创作自己的文档了,当然md的语法不止于此,对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需 HTML 标签添加到 Markdown 文本中即可。</p> </div> <footer class="astro-qxum7g3x"> <div class="meta sl-flex astro-qxum7g3x">   </div> <div class="pagination-links astro-up2deu7k" dir="ltr">  <a href="/gitstudy/gitstudy/" rel="next" class="astro-up2deu7k"> <svg aria-hidden="true" class="astro-up2deu7k astro-h7wd53pq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg>  <span class="astro-up2deu7k"> Next <br class="astro-up2deu7k"> <span class="link-title astro-up2deu7k">git 常用指令学习</span> </span> </a> </div>  </footer>  </div> </div>   </main> </div> </div>  </div> </div>  </body></html>
