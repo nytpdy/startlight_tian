@@ -35,8 +35,8 @@ export default defineConfig({
 					autogenerate: { directory: 'blestudy' },
 				},
 				{
-					label: 'at',
-					autogenerate: { directory: 'at' },
+					label: 'other',
+					autogenerate: { directory: 'other' },
 				},
 			],
 		}),
