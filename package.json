@@ -8,15 +8,18 @@
     "build": "astro check && astro build",
     "preview": "astro preview --port 1234 --host",
     "astro": "astro",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist -r https://github.com/nytpdy/startlight_tian.git  -b gh-pages"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -r https://github.com/nytpdy/startlight_tian.git  -b gh-pages"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
+    "@astrojs/mdx": "^2.2.2",
     "@astrojs/starlight": "^0.17.2",
+    "@astrojs/vue": "^4.0.9",
     "astro": "^4.2.8",
     "sharp": "^0.32.5",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vue": "^3.4.21"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
