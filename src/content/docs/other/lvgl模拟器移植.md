@@ -103,3 +103,36 @@ git submodule update --init --recursive
 ```
 打开文件夹的lvgl.cbp文件,ctrl+F10运行
 ```
+---
+
+### 附加,lvgl 9.1版本过后编译不过问题
+
+假如你遇到的报错是如下内容,那么可以参考此解决方法
+
+```
+error: 'CREATE_WAITABLE_TIMER_MANUAL_RESET' undeclared (first use in this function)
+```
+
+因为LVGL V9版本更新了很多新特性，其中windows平台部分也进行了优化,所以我们下载的codeblocks自带的minGW版本会跟不上,所以我们需要自行下载一个来替换
+
+#### 操作步骤
+
+1. 获取MinGW更新版本(建议使用13.2.0版本，因为此版本已经过测试)
+   https://github.com/niXman/mingw-builds-binaries/releases/tag/13.2.0-rt_v11-rev1
+
+   我是下载的如下版本
+   <img src="https://ntd-1304354671.cos.ap-chengdu.myqcloud.com/mdPicture/1712543666044.png"  />
+
+<br>
+
+2. 打开Code::blocks 20.03安装的MinGW目录（默认安装目录是C:\Program Files\CodeBlocks\MinGW），并删除所有内容.
+
+<br>
+
+3. 将下载得到的 MinGW 压缩包中的内容解压到C:\Program Files\CodeBlocks\MinGW目录
+
+<br>
+
+4. 然后重新打开codeblock工程rebuild就行啦 
+
+5. 总结就是下载新版本替换原本codeblock的minGW版本文件
