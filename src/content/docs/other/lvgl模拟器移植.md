@@ -85,6 +85,8 @@ description: lvgl模拟器移植
 恭喜你,到了这一步骤,你已经成功完成模拟器移植了
 可以打开文件夹的lvgl.cbp文件,`ctrl`+`F10`运行了
 
+假如要创建新的文件,推荐在模拟器同级目录下创建一个文件夹,避免各种问题
+
 ### 总结
 
 可以使用以下命令一键完成
@@ -136,3 +138,28 @@ error: 'CREATE_WAITABLE_TIMER_MANUAL_RESET' undeclared (first use in this functi
 4. 然后重新打开codeblock工程rebuild就行啦 
 
 5. 总结就是下载新版本替换原本codeblock的minGW版本文件
+
+### 附加2,CodeBlocks中的文件过多导致.o文件信息过长，从而导致gcc链接失败的问题。
+
+出现在把自己的ui文件夹放在模拟器的上级文件夹,会导致第一次能编译成功,第二次就不行了,由百问网帮忙解决
+
+The error is as follows:
+
+<img src="https://ntd-1304354671.cos.ap-chengdu.myqcloud.com/mdPicture/1717071915560.png"  />
+
+Or:
+
+<img src="https://ntd-1304354671.cos.ap-chengdu.myqcloud.com/mdPicture/1717071932932.png"  />
+
+# Setting steps
+
+Go "Settings->Compiler...->"Other settings" tab -> click "Advanced options". 
+
+In the dialog that pops up, go to the "Others" tab and look near the bottom:
+
+- Use flat objects
+- Use full paths for source files (GDB workaround)
+
+<img src="https://ntd-1304354671.cos.ap-chengdu.myqcloud.com/mdPicture/1717072013467.png"  />
+
+<img src="https://ntd-1304354671.cos.ap-chengdu.myqcloud.com/mdPicture/1717072022407.png"  />
