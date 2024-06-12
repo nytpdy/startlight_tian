@@ -1,6 +1,6 @@
 
 <template>
-  <div id ="app">
+  <div id="todo-item">
     <input type="checkbox" id="todo-item" checked="false" />
     <label for="todo-item">{{ label }}</label>
   </div>
@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      label: 'hello world',
+      label: '我是vue组件,todo-item',
     }
   },
 }
