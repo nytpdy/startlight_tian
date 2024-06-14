@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import vue from "@astrojs/vue";
+import rehypeMermaid from "rehype-mermaid";
 
 import mdx from "@astrojs/mdx";
 
@@ -44,5 +45,8 @@ export default defineConfig({
         directory: 'other'
       }
     }]
-  }), vue()]
+  }), vue()],
+  markdown: {
+    rehypePlugins: [[rehypeMermaid, { strategy: "img-svg", dark: true }]],
+  },
 });

@@ -1,0 +1,56 @@
+---
+title: startlight使用mermaid
+description: 自留备用
+---
+
+1.需要自己先检查下版startlight版本,此方法需要0.22及以上
+
+更新startlight,使用以下一条即可
+```
+pnpm dlx @astrojs/upgrade
+npx @astrojs/upgrade
+yarn dlx @astrojs/upgrade
+```
+
+2. 下载mermaid的包,用其一即可
+```
+npm i rehype-mermaid
+pnpm i rehype-mermaid
+```
+
+3. 在astro.config.mjs添加配置
+```
+// astro.config.mjs
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
+import rehypeMermaid from "rehype-mermaid";
+
+export default defineConfig({
+  integrations: [
+    starlight({
+      title: "My Docs",
+    }),
+  ],
+  markdown: {
+    rehypePlugins: [rehypeMermaid],
+  },
+});
+```
+
+不行的话,使用这一个
+```
+export default defineConfig({
+  markdown: {
+    rehypePlugins: [[rehypeMermaid, { strategy: "img-svg", dark: true }]],
+  },
+});
+```
+
+4.此时你至少是能编译通过且能运行的,打开mermaid渲染失败的话
+使用此命令再重新启动
+```
+npx playwright install
+```
+
+---
+还能不解决的话,看看官方库的讨论吧 https://github.com/withastro/starlight
