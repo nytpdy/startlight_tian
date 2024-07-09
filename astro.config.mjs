@@ -13,39 +13,50 @@ export default defineConfig({
       github: 'https://github.com/withastro/starlight'
     },
     sidebar: [
-    // {
-    // 	label: 'Guides',
-    // 	items: [
-    // 		// Each item here is one entry in the navigation menu.
-    // 		{ label: 'Example Guide', link: '/guides/example/' },
-    // 	],
-    // },
-    // {
-    // 	label: 'Reference',
-    // 	autogenerate: { directory: 'reference' },
-    // },
-    {
-      label: 'mdstudy',
-      autogenerate: {
-        directory: 'mdstudy'
+      // {
+      // 	label: 'Guides',
+      // 	items: [
+      // 		// Each item here is one entry in the navigation menu.
+      // 		{ label: 'Example Guide', link: '/guides/example/' },
+      // 	],
+      // },
+      // {
+      // 	label: 'Reference',
+      // 	autogenerate: { directory: 'reference' },
+      // },
+      {
+        label: 'mdstudy',
+        autogenerate: {
+          directory: 'mdstudy'
+        }
+      },
+      {
+        label: 'gitstudy',
+        autogenerate: {
+          directory: 'gitstudy'
+        }
+      },
+      {
+        label: 'blestudy',
+        autogenerate: {
+          directory: 'blestudy'
+        }
+      },
+      {
+        label: '项目相关',
+        autogenerate: {
+          directory: '项目相关'
+        }
+      },
+      {
+        label: 'other',
+        autogenerate: {
+          directory: 'other'
+        }
       }
-    }, {
-      label: 'gitstudy',
-      autogenerate: {
-        directory: 'gitstudy'
-      }
-    }, {
-      label: 'blestudy',
-      autogenerate: {
-        directory: 'blestudy'
-      }
-    }, {
-      label: 'other',
-      autogenerate: {
-        directory: 'other'
-      }
-    }]
-  }), vue()],
+    ]
+  }),
+    vue()],
   markdown: {
     rehypePlugins: [[rehypeMermaid, { strategy: "img-svg", dark: true }]],
   },
